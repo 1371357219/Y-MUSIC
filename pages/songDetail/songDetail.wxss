@@ -1,0 +1,134 @@
+/* pages/songDetail/songDetail.wxss */
+
+.songDetailContainer{
+    position: relative;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+}
+.songDetailContainer .name{
+    color: white;
+    line-height: 60rpx;
+}
+.songDetailContainer .needle{
+    z-index: 100;
+    transform-origin: 50% 0;
+    transform: rotate(-10deg);
+    transition:transform 1s;
+    
+}
+.songDetailContainer .needleRotate{
+    transform: rotate(0deg);
+}
+.songDetailContainer .needleHeader{
+    position: relative;
+    left: 66rpx;
+    width: 60rpx;
+    height: 60rpx;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+.songDetailContainer .needleImg{
+    z-index: 99;
+    position: relative;
+    
+    left: 60rpx;
+    top: -30rpx;
+    width: 192rpx;
+    height: 274rpx;
+}
+.songDetailContainer .discContainer{
+    position: relative;
+    top: -144rpx;
+    width: 598rpx;
+    height: 598rpx;
+}
+.songDetailContainer .discImg{
+
+    
+    width: 598rpx;
+    height: 598rpx;
+}
+.songDetailContainer .discIcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 370rpx;
+    height: 370rpx;
+    border-radius: 50%;
+}
+
+.discAnimation{
+    animation: disc 5s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes disc{
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(360deg)
+    }
+}
+
+.musicControl{
+    position: absolute;
+    bottom:40rpx;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid white;
+    color: white;
+    padding-top: 10rpx;
+    align-items: center;
+    
+}
+.musicControl .iconfont{
+    font-size: 52rpx;
+}
+.musicControl .iconfont.big{
+    font-size: 90rpx;
+}
+
+
+.progressControl{
+    position: absolute;
+    bottom: 200rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 640rpx;
+    display: flex;
+    align-items: center;
+
+}
+.progressControl .progress{
+    position: relative;
+    width: 450rpx;
+    height: 4rpx;
+    margin: 0 10rpx;
+    background-color: rgba(0,0,0,.4);
+}
+.progress .currentTimeBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    height: 4rpx;
+
+}
+.currentTimeBar .circle{
+    position: absolute;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    right: 0;
+    top: -3rpx;
+    background-color: white;
+}

@@ -1,0 +1,51 @@
+<!-- pages/video/video.wxml -->
+<!-- 头部 -->
+<view class="video-header" >
+    <image src="/static/images/video/video.jpg"></image>
+    <view bindtap="toSearch">光辉岁月</view>
+    <image src="/static/images/logo.png"></image>
+</view>
+<scroll-view class="navScroll" scroll-x enable-flex  scroll-into-view="n{{currentId}}" 	scroll-with-animation="true">
+    <view wx:for="{{videoGroup}}" data-navid="{{item.id}}" bindtap="changeNav" id="n{{item.id}}" wx:key="id" class="navItem">
+        <view class="navContent {{item.id==currentId?'active':''}}">{{item.name}}</view>
+    </view>
+</scroll-view>
+<scroll-view class="videoScroll" 
+        scroll-y 
+        refresher-enabled="true"  
+        bindrefresherrefresh="handleRefresh"
+        refresher-triggered="{{isTriggered}}"> 
+    <view wx:for="{{videoUrlList}}" wx:key="index" class="video_view">
+        <video  id="{{item.urls[0].id}}" 
+                bindplay="videoPlay" 
+                
+                bindtimeupdate="handleTimeUpDate"
+                src="{{item.urls[0].url}}"
+                poster="{{videoList.datas[index].data.coverUrl}}"
+                class="common_video"
+                object-fit="fill"
+                wx:if="{{videoId==item.urls[0].id}}">
+        </video>
+        <image wx:else id="{{item.urls[0].id}}" bindtap="videoPlay" src="{{videoList.datas[index].data.coverUrl}}" class="common_video"></image>
+        <view class="title">{{videoList.datas[index].data.title}}</view>
+        <view class="bottom_content">
+            <view class="left_content">
+                <image src="{{videoList.datas[index].data.creator.avatarUrl}}"></image>
+                <text >{{videoList.datas[index].data.creator.nickname}}</text>
+            </view>
+            <view class="right_content">
+                <view class="like">
+                    <text class="iconfont icon-like"></text>
+                    <text class="">{{videoList.datas[index].data.shareCount}}</text>
+                </view>
+                <view class="comment">
+                    <text class="iconfont icon-pinglun11"></text>
+                    <text class="">{{videoList.datas[index].data.commentCount}}</text>
+                </view>
+                <button open-type="share" class="more">
+                    <text class="iconfont icon-gengduo"></text>
+                </button>
+            </view>
+        </view>
+    </view>
+</scroll-view>

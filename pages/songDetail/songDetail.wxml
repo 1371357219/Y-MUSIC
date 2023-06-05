@@ -1,0 +1,30 @@
+<!-- pages/songDetail/songDetail.wxml -->
+<view class="songDetailContainer">
+    
+    <text class="name">{{song.ar[0].name}}</text>
+    <view class="needle {{isPlay?'needleRotate':''}}">
+        <view class="needleHeader"></view>
+        <image class="needleImg" src="/static/images/song/needle.png"></image>
+    </view>
+    <view class="discContainer {{isPlay?'discAnimation':''}}">
+        <image class="discImg" src="/static/images/song/disc.png"></image>
+        <image class="discIcon" src="{{song.al.picUrl}}"></image>
+    </view>
+
+    <view class="progressControl">
+        <text class="timeStart">{{currentTime}}</text>
+        <view class="progress">
+            <view class="currentTimeBar" style="width:{{currentWidth}}rpx">
+                <view class="circle"></view>
+            </view>
+        </view>
+        <text class="timeStart">{{endTime}}</text>
+    </view>
+    <view class="musicControl">
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+        <text class="iconfont icon-shangyishou" id="pre" bindtap="ChangeSong"></text>
+        <text class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}} big" bindtap="handlePlay"></text>
+        <text class="iconfont icon-next" id="next" bindtap="ChangeSong"></text>
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+    </view>
+</view>

@@ -1,0 +1,75 @@
+/* pages/recommendSong/recommendSong.wxss */
+.recommendSongContainer{
+    
+}
+.recommendSongContainer .header{
+    position: relative;
+    width: 100%;
+    height: 300rpx;
+}
+.recommendSongContainer .header image{
+    width: 100%;
+    height: 100%;
+}
+.recommendSongContainer .date{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.recommendSongContainer .date .day{
+    font-size: 42rpx;
+}
+.listContainer{
+    position: relative;
+    top: -20rpx;
+    background-color: white;
+    padding: 0rpx 20rpx;
+    border-radius: 30rpx;
+}
+.listContainer .listHeader{
+    display: flex;
+    line-height: 100rpx;
+    font-weight: 500;
+    justify-content: space-between;
+}
+.listContainer .listHeader>text.right{
+    font-size: 22rpx;
+    color: #7A787B;
+}
+
+.listScroll{
+    height: calc(100vh - 100rpx - 300rpx);
+}
+.listScroll .listItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.listScroll .listItem .itemContainer{
+    display: flex;
+    padding: 20rpx 0;
+}
+.listItem .itemContainer .imgContainer{
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 20rpx;
+}
+.itemContainer .imgContainer image{
+    width: 100%;
+    height: 100%;
+}
+
+.itemContainer .content{
+    display: flex;
+    flex-direction: column;
+    color: #454545;
+    font-size: 26rpx;
+}
+.itemContainer .content .detail{
+    font-size: 22rpx;
+    line-height: 30rpx;
+}
+
+

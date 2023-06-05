@@ -1,0 +1,75 @@
+/* pages/login/login.wxss */
+
+.welcome-text{
+    color: #6C6A6B;
+    font-size: 56rpx;
+    padding: 60rpx 40rpx;
+}
+/* 表单 */
+.login-form .input-item{
+    color: #6C6A6B;
+    border-radius: 10rpx;
+    margin:0 40rpx 40rpx 40rpx ;
+    
+    background-color: #F8F5FC;
+}
+.login-form .input-item .title,
+.login-form .input-item input{
+    padding: 10rpx 20rpx;
+}
+.submit-item{
+    margin-top: 40rpx;
+    display: inline-block;
+    width: 100%;
+}
+.login_btn{
+    margin: 0rpx 40rpx !important;
+    width: auto !important;
+    border-radius: 60rpx;
+    background-color: #D43C33;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.forget-pwd{
+    margin-top: 40rpx;
+    color: #88ABD6;
+    text-align: center;
+}
+
+.register_text{
+    color: #BDBDBD;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 40rpx;
+    text-align: center;
+}
+.register_text .register-btn{
+    color: #88ABD6;
+}
+
+/* 二维码登录界面 */
+.login-container-qr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reflash_login_again{
+    margin-top: 60rpx;
+    background-color: #D43C33;
+    color: #ffffff;
+}
+.login-container-qr .tips{
+    margin-top: 60rpx;
+    color: red;
+}
+
+
+.change-login{
+    position: fixed;
+    right: 10rpx;
+    bottom: 10rpx;
+
+}

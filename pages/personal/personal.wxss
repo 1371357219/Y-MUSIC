@@ -1,0 +1,158 @@
+/* pages/personal/personal.wxss */
+.personalContainer{
+    position: relative;
+    height: 100%;
+
+}
+/* 上半部分 */
+.user-section{
+    height: 600rpx;
+    position: relative;
+   
+    
+}
+.bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+     
+}
+.personal-icon{
+    display: flex;
+    padding: 40rpx;
+    align-items: center;
+
+}
+.personal-icon .username{
+    font-size: 40rpx;
+    margin-left: 20rpx;
+}
+.personal-icon .icon{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    border: 6rpx solid white;
+}
+.personal-icon .icon image{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    
+}
+.member-card{
+    position: relative;
+    color: #F5E3A2;
+    margin:0 40rpx;
+    padding: 20rpx;
+    border-radius: 16rpx;
+    background-color: rgba(0, 0, 0, .7);
+}
+.member-card .header{
+    display: flex;
+    font-size: 26rpx;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.member-card .header .Openbtn{
+    color: #000000;
+    border-radius: 20rpx;
+    background-color: #F5E3A2;
+    padding: 4rpx 20rpx;
+    
+}
+.member-card .header .header_left .iconfont{
+    font-size: 36rpx;
+    margin-right: 20rpx;
+}
+.member-card .content{
+    padding-top: 40rpx;
+}
+.member-card .content>text{
+    display: block;
+}
+
+
+/* 下半部分 */
+.cover-container{
+    position: absolute;
+    top: 400rpx;
+    left: 0;
+    right:0;
+    background-color: #F5F5F5;
+
+
+}
+.cover-container .top_img{
+    position: absolute;
+    width: 100%;
+    top: -20rpx;
+    left: 0;
+    right: 0;
+    height: 20rpx;
+}
+.nav-section{
+    display: flex;
+    padding: 20rpx 0;
+    background-color: #ffffff;
+    margin: 10rpx 20rpx;
+    border-radius: 15rpx;
+}
+.nav-section .nav-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 25%;
+    font-size: 26rpx;
+    font-weight: 600;
+}
+.nav-section .nav-item .iconfont{
+    color: #AA7275;
+    font-size: 58rpx;
+    margin-bottom: 16rpx;
+}
+.cover-container .personalContent{
+    margin: 20rpx 20rpx;
+    background-color: #ffffff;
+    color: #675F62;
+
+}
+.personalContent .header .title{
+    display: block;
+    padding: 15rpx;
+}
+.personalContent .header .content{
+    font-size: 38rpx;
+    padding: 20rpx 0;
+    font-weight: 500;
+}
+.personalContent .header .record_lists{
+    display: flex;
+    height: 220rpx;
+}
+.record_lists .list_item{
+    
+    flex: 0 0 200rpx;
+    overflow: hidden;
+    border-radius: 10rpx;
+    height: 200rpx;
+    margin-right: 20rpx;
+}
+.record_lists .list_item image{
+    
+    width: 100%;
+    height:100%;
+}
+
+
+.personalContent .personal-nav .nav-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 26rpx 10rpx;
+    border-top: 6rpx solid #F5F5F5;
+
+}
+/*  */

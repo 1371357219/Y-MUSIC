@@ -1,0 +1,38 @@
+<!--pages/login/login.wxml-->
+<view class="login-container" wx:if="{{login_model===1}}">
+    <view class="welcome-text">
+        欢迎回来！
+    </view>
+    <form class="login-form" bindsubmit="loginSubmit">
+        <view class="input-item">
+            <view class="title">手机号码</view>
+            <input id="phone" class="phone-input" bindinput="bindInput" placeholder="请输入手机号码"/>
+        </view>
+        <view class="input-item">
+            <view class="title">密码</view>
+            <input id="password" class="phone-input" bindinput="bindInput"  password placeholder="请输入密码"/>
+        </view>
+        <view class="submit-item">
+        <button form-type="submit" class="login_btn">登录</button>
+        </view>
+        
+    </form>
+    <view class="forget-pwd">
+        <text >忘记密码？</text>
+    </view>
+    <view class="register_text">
+        还没有账号？<text class="register-btn">马上注册</text>
+    </view>
+</view>
+
+<view class="login-container-qr" wx:if="{{login_model===2}}">
+    <image wx:if="{{show_qrimg}}" src="{{qrimg}}" />
+    <text wx:if="{{show_qrimg}}" class="">（扫码登录）</text>
+    <text class="tips">{{tips_text}}</text>
+    <button bindtap="loginSubmit" wx:if="{{!show_qrimg}}" class="reflash_login_again">重新获取二维码</button>
+
+</view>
+
+<view class="change-login" bindtap="changeLogin">
+    <text>切换登录方式</text>
+</view>
